@@ -12,7 +12,7 @@ Mainly, it connect to configured WiFi, then, prediocally, it will fetch the late
 
 ## Requirements
 
-- SmallTV ([Shopee](https://shopee.co.th/artexlife/27367545865), [AliExpress](https://www.aliexpress.com/item/1005004679769445.html))
+- SmallTV ([Shopee](https://s.shopee.co.th/8KcMGf7r1M), [AliExpress](https://www.aliexpress.com/item/1005004679769445.html))
 - USB-C Cable
 
 ## Installation
