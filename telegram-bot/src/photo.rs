@@ -86,7 +86,8 @@ fn dump_to(img: &image::DynamicImage, fmt: ImageFormat) -> ResponseResult<Vec<u8
 }
 
 pub fn dump_to_bmp(img: &image::DynamicImage) -> ResponseResult<Vec<u8>> {
-    dump_to(img, ImageFormat::Bmp)
+    let img_24bits = img.to_rgb8();
+    dump_to(&image::DynamicImage::ImageRgb8(img_24bits), ImageFormat::Bmp)
 }
 
 pub fn dump_to_png(img: &image::DynamicImage) -> ResponseResult<Vec<u8>> {
