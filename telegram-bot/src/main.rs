@@ -21,7 +21,7 @@ async fn main() {
         .with_env_filter(EnvFilter::from_env("RUST_LOG"))
         // sets this to be the default, global collector for this application.
         .init();
-    tracing::info!("Starting throw dice bot...");
+    tracing::info!("Starting SmallTV QR code bot...");
 
     let bot = Bot::from_env();
 
