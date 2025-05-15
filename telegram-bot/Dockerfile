@@ -47,3 +47,4 @@ ENV RUST_LOG=telegram-bot=info,tower_http=info,sqlx=info
 
 # Run the binary
 ENTRYPOINT ["./telegram-bot"]
+LABEL org.opencontainers.image.source=https://github.com/itpcc/smalltv-display-image
