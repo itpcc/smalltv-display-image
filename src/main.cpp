@@ -87,11 +87,11 @@ void initWiFi() {
 }
 
 int fetchQR() {
-  String const urlPrefix {SERVICE_PATH};
+  String const urlPrefix {SERVICE_HOST};
   uint8_t attempt = 0;
 
   // * Check latest timestamp
-  http.begin(client, urlPrefix + "/img/latest_version");
+  http.begin(client, String {SERVICE_HOST}, SERVICE_PORT, "/latest_version", false);
   // @see https://github.com/esp8266/Arduino/issues/7688#issuecomment-752090992
   http.setAuthorization("");
   http.addHeader("Authorization", "Bearer " + base64::encode(SERVICE_TOKEN));
@@ -121,9 +121,7 @@ int fetchQR() {
 
   // Fetch the actual QR
   attempt = 0;
-  String urlImg {urlPrefix};
-
-  urlImg.concat("/img/qr_");
+  String urlImg {"/qr-"};
   urlImg.concat(latestVersionStr);
   urlImg.concat(".bmp");
   http.setURL(urlImg);

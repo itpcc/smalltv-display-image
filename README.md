@@ -28,7 +28,7 @@ Mainly, it connect to configured WiFi, then, prediocally, it will fetch the late
 
     #define WIFI_SSID "<WiFi SSID>"
     #define WIFI_PASSWORD "<WiFi Password>"
-    #define SERVICE_PATH "http://<IP/Domain Name>"
+    #define SERVICE_HOST "<IP/Domain Name>"
     #define SERVICE_PORT 80
     #define SERVICE_TOKEN "<Authorization token>"
 
